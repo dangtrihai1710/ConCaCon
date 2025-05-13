@@ -37,7 +37,6 @@ function App() {
       </main>
       <Footer />
       <ToastContainer position="bottom-right" />
-      <Toast />
     </div>
   );
 }
