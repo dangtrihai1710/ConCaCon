@@ -270,6 +270,16 @@ export const fetchApplications = async () => {
   }
 };
 
+// Thêm hàm fetchRecruiterApplications (bản sao của fetchApplications cho mục đích tương thích)
+export const fetchRecruiterApplications = async () => {
+  try {
+    const response = await api.get('/applications');
+    return response;
+  } catch (error) {
+    throw error.response?.data || { message: 'Có lỗi xảy ra, vui lòng thử lại sau.' };
+  }
+};
+
 export const fetchApplicationDetail = async (id) => {
   try {
     const response = await api.get(`/applications/${id}`);
